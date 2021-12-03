@@ -40,7 +40,23 @@
 // The replace() method replaces a specified value with another value in a string:
 // By default, the replace() method replaces only the first match:
 // By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
-let text = "Please visit Microsoft Microsoft!";
-let newText = text.replace("Microsoft", "W3Schools");
-console.log(newText);
+// To replace case insensitive, use a regular expression with an /i flag (insensitive):
+// To replace all matches, use a regular expression with a /g flag (global match):
+// let text = "Please visit MICROSOFT Microsoft!";
+// let newText = text.replace(/Microsoft/gi, "W3Schools");
+// console.log(newText);
+
+// Converting to Upper and Lower Case
+// A string is converted to upper case with toUpperCase():
+//To upper and to lower does not not change the string they are called on. They return a new string:
+// let text = "To uppercase";
+// let neText = text.toUpperCase();
+// console.log(neText , text);
+
+// The concat() Method
+// concat() joins two or more strings:
+// let stringOne = "I am a";
+// let stringTwo = "doctor";
+// let thirdStr = stringOne.concat(" ", stringTwo);
+// console.log(thirdStr);
 
