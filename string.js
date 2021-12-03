@@ -2,6 +2,8 @@
 // let name = "John Doe";
 // console.log(name);
 
+const { stringLiteral } = require("@babel/types");
+
 //To find the length of a string:
 // console.log(name.length)
 
@@ -60,3 +62,44 @@
 // let thirdStr = stringOne.concat(" ", stringTwo);
 // console.log(thirdStr);
 
+// String.trim()
+// The trim() method removes whitespace from both sides of a string:
+// String.trim does not change the string it is called on, it return a new string removing the space.
+//  let pracText = "                          I am checking                ";
+//  let triText =  pracText.trim();
+//  console.log(triText);
+//  console.log(pracText);
+
+// JavaScript String Padding
+// ECMAScript 2017 added two String methods: padStart and padEnd to support padding at the beginning and at the end of a string:
+
+// let text = '5';
+// let paddTxt = text.padStart(5, 0);
+// console.log(paddTxt);
+
+// let text = "5";
+// let padded = text.padEnd(4,0);
+// console.log(padded);
+
+//========================================================================
+// Extracting String Characters
+// There are 3 methods for extracting string characters:
+
+// charAt(position)
+//The charAt() method returns the character at a specified index (position) in a string:
+// let text = "There is a cat under the table";
+// // let charText = text.charAt(2);
+// // console.log(charText);
+
+// // charCodeAt(position)
+// // The charCodeAt() method returns the unicode of the character at a specified index in a string:
+// // The method returns a UTF-16 code (an integer between 0 and 65535):
+// let textCode = text.charCodeAt(2);
+// console.log(textCode);
+// Property access [ ]
+
+// Converting a String to an Array
+// A string can be converted to an array with the split() method:
+// let text = "There is a cat, under, the table";
+// let convertedStr = text.split(" ");
+// console.log(convertedStr)
