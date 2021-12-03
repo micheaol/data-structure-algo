@@ -1,8 +1,15 @@
+//BOOKS:
+// https://algs4.cs.princeton.edu/50strings/:
+//https://www.hackerearth.com/practice/algorithms/string-algorithm/basics-of-string-manipulation/tutorial/
+
+//Vidoe:
+// https://www.youtube.com/watch?v=HdFG8L1sajw&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=2
+
 //String declearation:
 // let name = "John Doe";
 // console.log(name);
 
-const { stringLiteral } = require("@babel/types");
+// const { stringLiteral } = require("@babel/types");
 
 //To find the length of a string:
 // console.log(name.length)
@@ -103,3 +110,49 @@ const { stringLiteral } = require("@babel/types");
 // let text = "There is a cat, under, the table";
 // let convertedStr = text.split(" ");
 // console.log(convertedStr)
+
+//==================================================================
+//JavaScript String Search=================
+// JavaScript methods for searching strings:
+
+// String.indexOf()
+// The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+let str = "Please locate where 'locate' occurs!";
+// let indexOfStr = str.indexOf('locate', 10);
+
+// String.lastIndexOf()
+// The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+// let lastStr = str.lastIndexOf('fish', 14)
+// console.log(lastStr);
+// Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+// Both methods accept a second parameter as the starting position for the search:
+// console.log(lastStr);
+// String.startsWith()
+// String.endsWith()
+
+// The search() method searches a string for a specified value and returns the position of the match:
+// let serchTxt = str.search('occurs');
+// console.log(serchTxt);
+
+// String.match()
+// The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+// let matcTxt = str.match(/locate/g);
+// console.log(matcTxt);
+
+// String.includes()
+// The includes() method returns true if a string contains a specified value.
+
+function superReducedString(s) {
+   //Convert the string to an array:
+   let convertStr = s.split("");
+   //iterate through the array:
+   for(let i = 0; i < convertStr.length; i++){
+       if(convertStr[i] === convertStr[ i + 1]){
+           convertStr.splice(i, 2);
+           i = -1;
+       }
+   }
+   return convertStr.length === 0? "Empty String": convertStr.join('');
+}
+
+console.log(superReducedString("aabb"))
