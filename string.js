@@ -117,7 +117,7 @@
 
 // String.indexOf()
 // The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
-let str = "Please locate where 'locate' occurs!";
+// let str = "Please locate where 'locate' occurs!";
 // let indexOfStr = str.indexOf('locate', 10);
 
 // String.lastIndexOf()
@@ -162,15 +162,24 @@ let str = "Please locate where 'locate' occurs!";
     
 // // }
 
-function camelcase(s) {
-    // Write your code here
-    let counter = 1;
-  for(let i = 0; i < s.length; i++){
-      if(s[i] == s[i].toUpperCase()){
-          counter += 1
-      }
-  }
-  console.log(counter)
-}
+// function camelcase(s) {
+//     // Write your code here
+//     let counter = 1;
+//   for(let i = 0; i < s.length; i++){
+//       if(s[i] == s[i].toUpperCase()){
+//           counter += 1
+//       }
+//   }
+//   console.log(counter)
+// }
 
-camelcase("lowerDogCake")
+// camelcase("lowerDogCake")
+
+let str = "bg95555";
+let regex = new RegExp(/[a-z]/ig)
+let count = 0;
+for(let i =0; i < str.length; i++){
+        count += 1
+
+}
+console.log(count)
