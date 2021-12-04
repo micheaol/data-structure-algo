@@ -142,17 +142,35 @@ let str = "Please locate where 'locate' occurs!";
 // String.includes()
 // The includes() method returns true if a string contains a specified value.
 
-function superReducedString(s) {
-   //Convert the string to an array:
-   let convertStr = s.split("");
-   //iterate through the array:
-   for(let i = 0; i < convertStr.length; i++){
-       if(convertStr[i] === convertStr[ i + 1]){
-           convertStr.splice(i, 2);
-           i = -1;
-       }
-   }
-   return convertStr.length === 0? "Empty String": convertStr.join('');
+// function superReducedString(s) {
+//    //Convert the string to an array:
+//    let convertStr = s.split("");
+//    //iterate through the array:
+//    for(let i = 0; i < convertStr.length; i++){
+//        if(convertStr[i] === convertStr[ i + 1]){
+//            convertStr.splice(i, 2);
+//            i = -1;
+//        }
+//    }
+//    return convertStr.length === 0? "Empty String": convertStr.join('');
+// }
+
+// console.log(superReducedString("aabbbc"))
+
+// // for (let index = 0; index < 10; index++) {
+// //       console.log(`Index = ${index} || index - 1 = ${index - 1} || index + 1 = ${index + 1}`)
+    
+// // }
+
+function camelcase(s) {
+    // Write your code here
+    let counter = 1;
+  for(let i = 0; i < s.length; i++){
+      if(s[i] == s[i].toUpperCase()){
+          counter += 1
+      }
+  }
+  console.log(counter)
 }
 
-console.log(superReducedString("aabb"))
+camelcase("lowerDogCake")
